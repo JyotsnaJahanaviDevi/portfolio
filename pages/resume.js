@@ -2,13 +2,21 @@ import React from "react";
 import Header from "../components/Header";
 import Cursor from "../components/Cursor";
 import data from "../data/portfolio.json";
+import { useRouter } from "next/router";
+
 
 const Resume = () => {
+  const router = useRouter();
+
+  const handleContactScroll = () => {
+    // Navigate to home page and scroll to contact section
+    router.push("/#contact");
+  };
   return (
     <>
       {data.showCursor && <Cursor />}
       <div className="container mx-auto flex flex-col items-center justify-center mt-10">
-        <Header isEducation />
+        <Header isEducation handleContactScroll={handleContactScroll} />
 
         <h1 className="text-3xl font-bold mb-6">My Resume</h1>
 
