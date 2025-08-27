@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Phone & Email side by side */}
           <div className="flex gap-4">
             <a
-              href="tel:+911234567890"
+              href="tel:+918790514510"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg transform transition duration-300 hover:bg-blue-700 hover:scale-105 flex items-center justify-center"
             >
               📞 +91 8790514510
