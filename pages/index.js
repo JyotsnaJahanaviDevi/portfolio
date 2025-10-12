@@ -10,6 +10,8 @@ import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
+import Typewriter from "../components/Typewriter";
+import ParticlesJS from "../components/ParticlesJS";
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -58,6 +60,7 @@ export default function Home() {
   return (
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
+      <ParticlesJS />
       <Head>
         <title>{data.name}</title>
       </Head>
@@ -89,7 +92,20 @@ export default function Home() {
               ref={textThree}
               className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
-              {data.headerTaglineThree}
+              <Typewriter 
+                texts={[
+                  "Full Stack Developer",
+                  "Software Developer", 
+                  "Python Developer",
+                  "Java Developer",
+                  "Machine Learning Engineer",
+                  "Data Scientist",
+                  "Cybersecurity Enthusiast"
+                ]}
+                speed={80}
+                deleteSpeed={50}
+                pauseTime={500}
+              />
             </h1>
             <h1
               ref={textFour}
